@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="IE-edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, intial-scale=1.0" name="viewport">
+<title>Order</title>
+ <!--Stylesheet-->
+ <link rel="stylesheet"type="text/css" href="/CSS/order.css"/>
+<!--fav-icon---------------->
+<link rel="shortcut icon" href="/Project/assets/images/fav-icon.png"/>
+	<!--style----->
+	<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+		body{
+			font-family:poppins;
+		}
+	</style>
+	<!--using FontAwesome--------------->
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+</head>
+<body>
+
+<!---login-and-sign-up--------------------------------->
+<div class="form">
+    <!--login---------->
+    <div class="login-form">
+        <!--cancel-btn---------------->
+        <a href="javascript:void(0);" class="form-cancel">
+            <i class="fas fa-times"></i>
+        </a>
+        <strong>Order Now!</strong>
+        <!--inputs-->
+        <form>
+            <div><strong></strong> for order call :+91 1234567890</strong> </div>
+            <div>tell your order-code and Address to our staf</div>
+            <div>with in seven days your order will shift </div>
+            <input type="submit" value="Call"/>
+        </form>
+        <!--forget-and-sign-up-btn-->
+        <div class="form-btns">
+            <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+        </div>
+    </div>
+
+ <!--jQuery---->
+    <!--using JQuery--------------->
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <!--------script---------->
+        <script type="text/javascript">
+          /*----cancel---------*/
+          $(document).on('click','.form-cancel',function(){
+        $('.form').removeClass('login-active')
+    });
+        </script>
+    
+</body>
+</html>

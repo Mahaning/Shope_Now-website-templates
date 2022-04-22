@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoping Website</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet"type="text/css" href="/CSS/signin_signup.css"/>
+    <!--Fav-icons-->
+    <link rel="Shortcut icons" href="/assets/images/fav-icon.png"/>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <!--light-slider-files-->
+    <link rel="stylesheet" href="/Scripts/JS/lightslider.js">
+    <!--js-link--------------------->
+<script src="/Scripts/JS/Jquery.js"></script>
+<script src="/Scripts/JS/lightslider.js"></script>
+
+</head>
+<body >
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!--------script---------->
+    <script type="text/javascript">
+      /*----for-search bar---------*/
+      /*-----For Search Bar-----------------------------*/
+    $(document).on('click','.search',function(){
+        $('.search-bar').addClass('search-bar-active')
+    });
+ 
+    $(document).on('click','.search-cancel',function(){
+        $('.search-bar').removeClass('search-bar-active')
+    });
+     /*---For Login and Sign-up----------------------------*/
+     $(document).on('click','.user',function(){
+        $('.form').addClass('login-active').removeClass('sign-up-active')
+    });
+    $(document).on('click','.already-account',function(){
+        $('.form').addClass('login-active').removeClass('sign-up-active')
+    });
+ 
+    $(document).on('click','.sign-up-btn',function(){
+        $('.form').addClass('sign-up-active').removeClass('login-active')
+    });
+ 
+    $(document).on('click','.form-cancel',function(){
+        $('.form').removeClass('login-active').removeClass('sign-up-active')
+    });
+    $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        auto:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+      });
+    });
+    </script>
+
+    <!-- ------login-and-sign up-form---->
+<div class="form">
+    <!--login---------->
+    <div class="login-form">
+     <!--cancel-btn---------------->
+     <a href="javascript:void(0);" class="form-cancel">
+         <i class="fas fa-times"></i>
+     </a>
+     <strong>Log In</strong>
+     <!--inputs-->
+     <form>
+         <input type="email" name="email" placeholder="Example@gmail.com" required/>
+         <input type="password" name="password" placeholder="Password" required/>
+         <input type="submit" value="Log In"/>
+     </form>
+     <!--forget-and-sign-up-btn-->
+     <div class="form-btns">
+         <a href="#" class="forget">Forget Your Password?</a>
+         <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+     </div>
+ </div>
+     <!--Sign-up---------->
+     <div class="sign-up-form">
+         <!--cancel-btn---------------->
+     <a href="javascript:void(0);" class="form-cancel">
+         <i class="fas fa-times"></i>
+     </a>
+         <strong>Sign Up</strong>
+         <!--inputs-->
+         <form>
+             <input type="text" name="fullname" placeholder="Full Name" required/>
+             <input type="email" name="email" placeholder="Example@gmail.com" required/>
+             <input type="password" name="password" placeholder="Password" required/>
+             <input type="submit" value="Sign Up"/>
+         </form>
+         <!--forget-and-sign-up-btn-->
+         <div class="form-btns">
+             <a href="javascript:void(0);" class="already-account">Already Have Account?</a>
+ 
+         </div>
+     </div>
+ </div>
+</body>
+</html>

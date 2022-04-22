@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+
+  --green:#27ae60;
+  --black:#2c2c54;
+}
+*{
+  font-family: 'Nunito',sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border:none;
+  text-decoration: none;
+  background-color: #f2f9f4;
+  text-transform: capitalize;
+  transition: all  .2s linear;
+}
+*::selection{
+  background: var(--green);
+  color: #fff;
+}
+
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth;
+  }
+  
+
+  
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background:var(--green);
+    color:#fff;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .btn:hover{
+    background:var(--black);
+  }
+  
+  .heading{
+    text-align: center;
+    color:var(--black);
+    text-transform: uppercase;
+    padding:1rem;
+    font-size: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .heading span{
+    color:var(--green);
+    text-transform: uppercase;
+  }
+  
+  .header-1{
+    background:#eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+  }
+  
+  .logo{
+    color:var(--black);
+    font-weight: bolder;
+    font-size: 3rem;
+  }
+  
+  .logo i{
+    padding-right: .5rem;
+    color:var(--green);
+  }
+  
+  .header-1 .search-box-container{
+    display: flex;
+    height:5rem;
+  }
+  
+  .header-1 .search-box-container #search-box{
+    height: 100%;
+    width:100%;
+    padding:1rem;
+    font-size: 2rem;
+    color:#333;
+    border:.1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+  }
+  
+  .header-1 .search-box-container label{
+    height: 100%;
+    width:8rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    color:#fff;
+    background:var(--green);
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .header-1 .search-box-container label:hover{
+    background:var(--black);
+  }
+  
+  .header-2{
+    background:#fff;
+    /* display: flex; */
+    align-items: center;
+    background: #f2f9f4;
+    justify-content: space-between;
+    padding:0;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+  }
+  
+  .header-2.active{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 10000;
+  }
+  
+  .header-2 {
+    padding:2.5rem 0rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color:var(--black);
+  }
+  .navbar a{
+    padding:0 0.5rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    color:var(--black);
+  }
+  
+  .header-2 .dropdown .navbar a:hover{
+    background:var(--green);
+    color:#fff;
+  }
+  
+  .header-2 .icons a{
+    font-size: 2.5rem;
+    color:var(--black);
+    padding-left: 1rem;
+    float: right;
+  }
+  
+  .header-2 .icons a:hover{
+    color:var(--green);
+  }
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 0 1.4rem;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background: var(--green);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  /* slider */
+  .full-slider-box{
+    width:100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .slider-box {
+    width     : 98%;
+    max-height: 70vh;
+    position  : relative;
+    overflow  : hidden;
+    margin    : 30px auto;
+    box-shadow: 5px 4px 1.2px rgba(255, 255, 255, 0.473);
+  }
+  
+  #slider {
+    width     : 100%;
+    display   : inline-flex;
+    transition: 0.7s;
+  }
+  
+  #slider img {
+    width: 100%;
+  }
+  
+  .indicators {
+    position : absolute;
+    left     : 50%;
+    bottom   : 20px;
+    transform: translateX(-50%);
+    color: rgba(0, 0, 0, 0.507);
+    background: transparent;
+  }
+  
+  .indicators span {
+    display      : inline-block;
+    width        : 15px;
+    height       : 15px;
+    border-radius: 50%;
+    background   : rgba(59, 51, 51, 0.39);
+    cursor       : pointer;
+  }
+  
+  .active {
+    background: rgb(253, 189, 255) !important;
+  }
+  /* slider-flow */
+ 
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #f2f9f4;
+    overflow: hidden;
+  }
+  
+  .flow-sld {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+  .flow-sld__viewport {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #f2f9f4;
+  }
+  .flow-sld__viewbox {
+    display: block;
+    position: relative;
+    perspective: 100vw;
+    margin: 0 auto;
+    width: 33.3333333333%;
+    max-width: 280px;
+    transform-style: preserve-3d;
+    z-index: 0;
+  }
+  .flow-sld__viewbox::before {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    height: 0;
+    padding-bottom: 100%;
+    width: 100%;
+  }
+  .flow-sld__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.3s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0.3s;
+    transform-style: preserve-3d;
+  }
+  .flow-sld-target {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+  input.flow-sld-target {
+    display: none;
+  }
+  
+  .flow-sld-target:first-of-type:last-of-type ~ .flow-sld__viewport .flow-sld-item:nth-child(1) .flow-sld-item__trigger {
+    display: none;
+  }
+  .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(0%);
+  }
+  .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-50%);
+  }
+  .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-100%);
+  }
+  .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-150%);
+  }
+  .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-200%);
+  }
+  .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-250%);
+  }
+  .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-300%);
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld__container {
+    transform: translateX(-350%);
+  }
+  .flow-sld-item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(45deg);
+    transition: transform 0.6s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0.15s;
+  }
+  .flow-sld-item:nth-child(1) {
+    left: 0%;
+  }
+  .flow-sld-item:nth-child(2) {
+    left: 50%;
+  }
+  .flow-sld-item:nth-child(3) {
+    left: 100%;
+  }
+  .flow-sld-item:nth-child(4) {
+    left: 150%;
+  }
+  .flow-sld-item:nth-child(5) {
+    left: 200%;
+  }
+  .flow-sld-item:nth-child(6) {
+    left: 250%;
+  }
+  .flow-sld-item:nth-child(7) {
+    left: 300%;
+  }
+  .flow-sld-item:nth-child(8) {
+    left: 350%;
+  }
+  .flow-sld-item__trigger {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: #fffcfcc2;
+    cursor: pointer;
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) .flow-sld-item__trigger, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) .flow-sld-item__trigger {
+    display: none;
+    background: #cce6d3;
+  }
+  .flow-sld-item__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    transform: scale(0.75);
+    transition: transform 0.3s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0s;
+    z-index: 10;
+  }
+  .flow-sld-item__inner::before, .flow-sld-item__inner::after {
+    display: block;
+    position: absolute;
+    content: "";
+  }
+  .flow-sld-item__inner::before {
+    top: 24px;
+    left: 24px;
+    bottom: 24px;
+    right: 24px;
+    z-index: 0;
+    transition: transform 0.3s cubic-bezier(0.62, 0.28, 0.23, 0.99) 0.15s;
+    transform: translate(-24px, 12px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  .flow-sld-item__inner::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000 50%, rgba(0, 0, 0, 0) 100%); */
+    background-repeat: repeat-x;
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    transition: background-position 0.3s linear;
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) .flow-sld-item__inner, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) .flow-sld-item__inner, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) .flow-sld-item__inner, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) .flow-sld-item__inner, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) .flow-sld-item__inner, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) .flow-sld-item__inner, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) .flow-sld-item__inner, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) .flow-sld-item__inner {
+    transform: scale(1);
+    transition-delay: 0.6s;
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) .flow-sld-item__inner::before {
+    transform: translate(0, 24px);
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) .flow-sld-item__inner::after {
+    background-position: -50% 0%;
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) ~ .flow-sld-item .flow-sld-item__inner::before, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) ~ .flow-sld-item .flow-sld-item__inner::before {
+    transform: translate(24px, 12px);
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) ~ .flow-sld-item .flow-sld-item__inner::after, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) ~ .flow-sld-item .flow-sld-item__inner::after {
+    background-position: -100% 0%;
+  }
+  /*  */
+  .flow-sld-item-figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .flow-sld-item-figure__image {
+    position: absolute;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 1;
+  }
+  .flow-sld-item-figure__caption {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgb(0, 0, 0);
+    padding: 24px;
+    background-image: linear-gradient(0deg, rgb(255, 254, 254) 0%, transparent 100%);
+    z-index: 2;
+  }
+  .flow-sld-item-figure__caption a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+  }
+  .flow-sld-item-figure__caption span {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8), .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7), .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6), .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5), .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4), .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3), .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2), .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) {
+    transform: translate3d(0, 0, 0) rotateY(0deg);
+    z-index: 9999;
+  }
+  .flow-sld-target:nth-of-type(8):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(8) ~ .flow-sld-item, .flow-sld-target:nth-of-type(7):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(7) ~ .flow-sld-item, .flow-sld-target:nth-of-type(6):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(6) ~ .flow-sld-item, .flow-sld-target:nth-of-type(5):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(5) ~ .flow-sld-item, .flow-sld-target:nth-of-type(4):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(4) ~ .flow-sld-item, .flow-sld-target:nth-of-type(3):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(3) ~ .flow-sld-item, .flow-sld-target:nth-of-type(2):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(2) ~ .flow-sld-item, .flow-sld-target:nth-of-type(1):checked ~ .flow-sld__viewport .flow-sld-item:nth-child(1) ~ .flow-sld-item {
+    transform: translate3d(0, 0, 0) rotateY(-45deg) !important;
+  }
+  .block-heading span{
+    border: solid;
+    background: black;
+    font-size: 2.1rem;
+    color: #fff;
+    padding-left: 11px;
+    padding-right: 13px;
+    border-radius: 3px;
+  }
+  .sec-box{
+    background-color: #e9f9eeb8
+  }
+  .flow-sld-item{
+    background: #f2f9f4;
+  }
+.block-heading{
+ background: #f2f9f4;
+ padding-bottom: 20px;
+  }
+ /* product box */
+ .product-container2{
+  width:99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 5px 0;
+  
+}
+.product-box{
+  display: flex;
+  flex-grow: 0.5;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f7f7f7;
+  border-radius: 10px;
+  margin: 20px;
+}
+.product-img{
+  width:200px;
+  height: 210px;
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.product-img img{
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.product-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border-top: 1px solid #f3f3f3;
+}
+.p-name{
+  color: #727272;
+}
+.p-price{
+  color: #333333;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.product-box:hover{
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+.add-cart{
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #0b9d8a;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  display: none;
+  animation: fade 0.3s;
+
+}
+.add-cart:hover{
+  background-color: #f76b6a;
+  transition: all ease 0.2s;
+}
+.product-box:hover .add-cart{
+  display: flex;
+}
+.new-arrival{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section1 .section2 .sec-box{
+  padding: 0 0;
+}
+.pro-box-head{
+  color: #ffffff;
+  background: black;
+  border-radius: 4px;
+  font-size: 1.9rem;
+
+}
+/*  */
+.services{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+.services-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.1);
+  min-width: 250px;
+  padding: 20px;
+  margin: 15px;
+  flex-grow: 0.7;
+}
+.services-box i{
+  color: #0b9d8a;
+  font-size: 2rem;
+  margin: 15px;
+}
+.services-box span{
+  color: #222222;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+.services-box p{
+  color: #878787;
+  margin: 0px;
+  font-size: 0.9rem;
+}
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.copyright{
+  font-size: 0.9rem;
+  color: #4e4e4e;
+  letter-spacing: 1px;
+}
+.subscribe input{
+  width:240px;
+  height: 43px;
+  padding: 0px 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  outline: none;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
+}
+.subscribe input[type="submit"]{
+  width:120px;
+  background-color: #0b9d8a;
+  color: #ffffff;
+  margin: 0px 5px;
+}
+/* .fix-nav{
+  width:100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.05);
+  z-index: 102; */
+
+.toggle{
+  display: none;
+}
+.check{
+  background: #222222  ;
+  color: #27ae60;
+}
